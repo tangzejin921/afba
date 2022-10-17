@@ -33,7 +33,8 @@
 #include <sys/resource.h>
 #include <sys/syscall.h>
 #include <unistd.h>
-extern int pthread_setname_np (pthread_t __target_thread, __const char *__name) __THROW __nonnull ((2));
+#include <pthread.h>
+//extern int pthread_setname_np (pthread_t __target_thread, __const char *__name) __THROW __nonnull ((2));
 #endif
 
 #include "SDL_platform.h"

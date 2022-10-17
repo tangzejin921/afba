@@ -26,7 +26,8 @@ LOCAL_SRC_FILES :=\
 	arm/filter_neon_intrinsics.c
 
 #LOCAL_SHARED_LIBRARIES := -lz
-LOCAL_EXPORT_LDLIBS := -lz
+#LOCAL_EXPORT_LDLIBS := -lz
+LOCAL_LDLIBS :=  -lz
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/.
 
 #include $(BUILD_SHARED_LIBRARY)

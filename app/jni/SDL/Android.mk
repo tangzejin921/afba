@@ -12,7 +12,10 @@ LOCAL_MODULE := SDL
 LOCAL_ARM_MODE   := arm
 LOCAL_ARM_NEON  := true
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
-LOCAL_CFLAGS += -D GL_GLEXT_PROTOTYPES -DHAVE_STDIO_H
+LOCAL_CFLAGS += -D GL_GLEXT_PROTOTYPES -DHAVE_STDIO_H \
+    -Werror -Wno-pointer-bool-conversion -Wno-unused-parameter -Wno-sign-compare \
+    -Wno-typedef-redefinition -Wno-incompatible-pointer-types -Wno-missing-field-initializers \
+    -Wno-implicit-function-declaration
 ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
     LOCAL_CFLAGS += -mcpu=cortex-a8 -march=armv7-a -mtune=cortex-a8 -mfpu=vfpv3 -O3 -Os
 endif
