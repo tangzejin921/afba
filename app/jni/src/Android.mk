@@ -42,13 +42,13 @@ INTF_VIDEO_SDL_OBJS := $(wildcard $(INTF_VIDEO_SDL_DIR)/*.cpp)
 
 LOCAL_SRC_FILES += $(ANDROID_OBJS) \
 		$(LIB7Z) $(LIBPNG) $(BURN) $(BURNER) $(CPU) \
-		$(subst jni/src/,,$(INTF_OBJS)) \
-		$(subst jni/src/,,$(INTF_AUDIO_OBJS)) \
-		$(subst jni/src/,,$(INTF_AUDIO_SDL_OBJS)) \
-		$(subst jni/src/,,$(INTF_INPUT_OBJS)) \
-		$(subst jni/src/,,$(INTF_INPUT_SDL_OBJS)) \
-		$(subst jni/src/,,$(INTF_VIDEO_OBJS)) \
-		$(subst jni/src/,,$(INTF_VIDEO_SDL_OBJS))
+		$(subst ,,$(INTF_OBJS)) \
+		$(subst ,,$(INTF_AUDIO_OBJS)) \
+		$(subst ,,$(INTF_AUDIO_SDL_OBJS)) \
+		$(subst ,,$(INTF_INPUT_OBJS)) \
+		$(subst ,,$(INTF_INPUT_SDL_OBJS)) \
+		$(subst ,,$(INTF_VIDEO_OBJS)) \
+		$(subst ,,$(INTF_VIDEO_SDL_OBJS))
 
 #$(warning $(LOCAL_SRC_FILES)) 
 LOCAL_SRC_FILES := $(filter-out intf/input/sdl/inp_sdl.cpp, $(LOCAL_SRC_FILES))

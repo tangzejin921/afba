@@ -1,6 +1,6 @@
 BURNER_PATH := $(call my-dir)
 
-BURNER := 	$(subst jni/src/,, \
+BURNER := 	$(subst ,, \
 			burner/unzip.c \
 			burner/ioapi.c \
 			$(wildcard $(BURNER_PATH)/*.cpp) \

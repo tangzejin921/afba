@@ -1,6 +1,6 @@
 CPU_PATH := $(call my-dir)
 
-CPU := 	$(subst jni/src/,, \
+CPU := 	$(subst ,, \
 			$(wildcard $(CPU_PATH)/*.cpp) \
 			$(wildcard $(CPU_PATH)/arm/*.cpp) \
 			$(wildcard $(CPU_PATH)/arm7/*.cpp) \

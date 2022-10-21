@@ -1,6 +1,6 @@
 BURN_PATH := $(call my-dir)
 
-BURN := 	$(subst jni/src/,, \
+BURN := 	$(subst ,, \
 			$(wildcard $(BURN_PATH)/*.cpp) \
 			$(wildcard $(BURN_PATH)/devices/*.cpp) \
 			$(wildcard $(BURN_PATH)/snd/*.c*) \

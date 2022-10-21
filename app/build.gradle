@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '24.0.2'
     defaultConfig {
         applicationId "com.qn.afba"
         minSdkVersion 19
@@ -11,15 +10,15 @@ android {
         versionCode 1
         versionName "1.0"
         externalNativeBuild {
-//            ndkBuild {
-//                cppFlags ''
-//            }
+            ndkBuild {
+                cppFlags ''
+            }
             ndk{
                 abiFilters 'armeabi-v7a'
             }
-            cmake {
-                cFlags "-D GL_GLEXT_PROTOTYPES -DHAVE_STDIO_H -mcpu=cortex-a8 -march=armv7-a -mtune=cortex-a8 -mfpu=vfpv3 -O3 -Os"
-            }
+//            cmake {
+//                cFlags "-D GL_GLEXT_PROTOTYPES -DHAVE_STDIO_H -mcpu=cortex-a8 -march=armv7-a -mtune=cortex-a8 -mfpu=vfpv3 -O3 -Os"
+//            }
         }
     }
     buildTypes {
@@ -42,13 +41,13 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     externalNativeBuild {
-//        ndkBuild {
-//            path file('jni/Android.mk')
-//        }
-        cmake {
-            path "jni/CMakeLists.txt"
-            version "3.10.2"
+        ndkBuild {
+            path file('jni/Android.mk')
         }
+//        cmake {
+//            path "jni/CMakeLists.txt"
+//            version "3.10.2"
+//        }
     }
 }
 
