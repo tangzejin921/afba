@@ -166,14 +166,14 @@ INT32 MakeScreenShot()
 #ifdef _UNICODE
 	sprintf(szAuthor, APP_TITLE " v%.20ls", szAppBurnVer);
 #else
-	sprintf(szAuthor, APP_TITLE " v%.20s", szAppBurnVer);
+	sprintf(szAuthor, APP_TITLE " v%d", szAppBurnVer);
 #endif
 	sprintf(szDescription, "Screenshot of %s", DecorateGameName(nBurnDrvActive));
 	sprintf(szCopyright, "%s %s", BurnDrvGetTextA(DRV_DATE), BurnDrvGetTextA(DRV_MANUFACTURER));
 #ifdef _UNICODE
 	sprintf(szSoftware, APP_TITLE " v%.20ls using LibPNG " PNG_LIBPNG_VER_STRING, szAppBurnVer);
 #else
-	sprintf(szSoftware, APP_TITLE " v%.20s using LibPNG " PNG_LIBPNG_VER_STRING, szAppBurnVer);
+	sprintf(szSoftware, APP_TITLE " v%d using LibPNG " PNG_LIBPNG_VER_STRING, szAppBurnVer);
 #endif
 	sprintf(szSource, "%s video game hardware", BurnDrvGetTextA(DRV_SYSTEM));
 

@@ -97,7 +97,7 @@ INT32 ConfigGameSave(bool bSave)
 	}
 
 	// Write title
-	_ftprintf(h, _T("// ") _T(APP_TITLE) _T(" v%s --- Config File for %s (%s)\n\n"), szAppBurnVer, BurnDrvGetText(DRV_NAME), ANSIToTCHAR(BurnDrvGetTextA(DRV_FULLNAME), NULL, 0));
+	_ftprintf(h, _T("// ") _T(APP_TITLE) _T(" v%d --- Config File for %s (%s)\n\n"), szAppBurnVer, BurnDrvGetText(DRV_NAME), ANSIToTCHAR(BurnDrvGetTextA(DRV_FULLNAME), NULL, 0));
 
 	_ftprintf(h, _T("// --- Miscellaneous ----------------------------------------------------------\n\n"));
 	// Write version number

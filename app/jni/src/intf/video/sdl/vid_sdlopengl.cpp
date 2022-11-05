@@ -3,9 +3,9 @@
 #include "vid_support.h"
 #include "vid_softfx.h"
 
-#include <GL/gl.h>
+#include <GLES/gl.h>
 #include <GL/glu.h>
-#include <GL/glext.h>
+#include <GLES/glext.h>
 
 #ifdef frame_timer
 #include <sys/time.h>
@@ -366,7 +366,7 @@ static int GetSettings(InterfaceInfo* pInfo)
 {
 	TCHAR szString[MAX_PATH] = _T("");
 
-	_sntprintf(szString, MAX_PATH, _T("Prescaling using %s (%i× zoom)"), VidSoftFXGetEffect(nUseBlitter), nSize);
+	_sntprintf(szString, MAX_PATH, _T("Prescaling using %s (%iï¿½ zoom)"), VidSoftFXGetEffect(nUseBlitter), nSize);
 	IntInfoAddStringModule(pInfo, szString);
 
 	if (nRotateGame) {

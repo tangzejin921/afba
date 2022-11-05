@@ -115,17 +115,17 @@ INT32 write_datfile(INT32 bType, FILE* fDat)
 	if (bType == DAT_MASTERSYSTEM_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - Master System Games</name>\n");
 	if (bType == DAT_GAMEGEAR_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - Game Gear Games</name>\n");
 
-	if (bType == DAT_ARCADE_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Arcade Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_MEGADRIVE_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Megadrive Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_PCENGINE_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" PC-Engine Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_TG16_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" TurboGrafx 16 Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_SGX_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" SuprGrafx Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_SG1000_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Sega SG-1000 Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_COLECO_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" ColecoVision Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_MASTERSYSTEM_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Master System Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_GAMEGEAR_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Game Gear Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_ARCADE_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%d") _T(" Arcade Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_MEGADRIVE_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%d") _T(" Megadrive Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_PCENGINE_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%d") _T(" PC-Engine Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_TG16_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%d") _T(" TurboGrafx 16 Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_SGX_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%d") _T(" SuprGrafx Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_SG1000_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%d") _T(" Sega SG-1000 Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_COLECO_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%d") _T(" ColecoVision Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_MASTERSYSTEM_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%d") _T(" Master System Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_GAMEGEAR_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%d") _T(" Game Gear Games</description>\n"), szAppBurnVer);
 	fprintf(fDat, "\t\t<category>Standard DatFile</category>\n");
-	_ftprintf(fDat, _T("\t\t<version>%s</version>\n"), szAppBurnVer);
+	_ftprintf(fDat, _T("\t\t<version>%d</version>\n"), szAppBurnVer);
 	fprintf(fDat, "\t\t<author>" APP_TITLE "</author>\n");
 	fprintf(fDat, "\t\t<homepage>http://www.fbalpha.com/</homepage>\n");
 	fprintf(fDat, "\t\t<url>http://www.fbalpha.com/</url>\n");

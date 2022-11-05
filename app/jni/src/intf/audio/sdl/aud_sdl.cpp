@@ -153,7 +153,7 @@ static int SDLSoundInit()
 
 	//dprintf(_T("SDLSoundInit (%dHz)"), nAudSampleRate);
 
-	if (nAudSampleRate <= 0) {
+	if (nAudSampleRate == 0) {
 		return 1;
 	}
 

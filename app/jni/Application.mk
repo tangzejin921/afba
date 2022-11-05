@@ -9,7 +9,7 @@ APP_CFLAGS := -fpermissive -Wno-error -Wno-return-type -Wno-pointer-bool-convers
 -Wno-typedef-redefinition -Wno-incompatible-pointer-types -Wno-missing-field-initializers \
 -Wno-implicit-function-declaration -Wno-deprecated-register -Wno-logical-not-parentheses \
 -Wno-tautological-pointer-compare -Wno-parentheses-equality -Wno-array-bounds \
--Wformat
+-Wformat -Wno-macro-redefined -Wno-absolute-value -Wno-shift-count-overflow
 
 APP_CXXFLAGS :=  -std=c++11 -Wno-error=c++11-narrowing
 APP_SHORT_COMMANDS := true

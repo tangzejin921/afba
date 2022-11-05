@@ -186,7 +186,7 @@ static int ReadKeyboard()
 		return 0;
 	}
 
-	SDLinpKeyboardState = SDL_GetKeyState(&numkeys);
+//	SDLinpKeyboardState = SDL_GetKeyState(&numkeys);
 	if (SDLinpKeyboardState == NULL) {
 		return 1;
 	}
@@ -452,7 +452,7 @@ int SDLinpGetControlName(int nCode, TCHAR* pszDeviceName, TCHAR* pszControlName)
 			if (i >= nJoystickCount) {				// This joystick isn't connected
 				return 0;
 			}
-			_tsprintf(pszDeviceName, "%hs", SDL_JoystickName(i));
+			_tsprintf(pszDeviceName, "%s", SDL_JoystickName(i));
 
 			break;
 		}

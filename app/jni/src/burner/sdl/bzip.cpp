@@ -263,9 +263,9 @@ static int __cdecl BzipBurnLoadRom(unsigned char* Dest, int* pnWrote, int i)
 		if (ri.nType & 0x02) {
 			_stprintf (szText + _tcslen(szText), _T(" %s"), _T("sound "));
 		}
-		_stprintf(szText + _tcslen(szText), _T("(%hs)..."), pszRomName);
+		_stprintf(szText + _tcslen(szText), _T("(%s)..."), pszRomName);
 	} else {
-		_stprintf(szText + _tcslen(szText), _T(" %hs..."), pszRomName);
+		_stprintf(szText + _tcslen(szText), _T(" %s..."), pszRomName);
 	}
 	ProgressUpdateBurner(ri.nLen ? 1.0 / ((double)nTotalSize / ri.nLen) : 0, szText, 0);
 
@@ -294,7 +294,7 @@ static int __cdecl BzipBurnLoadRom(unsigned char* Dest, int* pnWrote, int i)
 	if (ZipLoadFile(Dest, ri.nLen, pnWrote, RomFind[i].nPos)) {
 		// Error loading from the zip file
 		TCHAR szTemp[128] = _T("");
-		_stprintf(szTemp, _T("%s reading %.30hs from %.30s"), nRet == 2 ? _T("CRC error") : _T("Error"), pszRomName, GetFilenameW(szBzipName[nCurrentZip]));
+		_stprintf(szTemp, _T("%s reading %s from %s"), nRet == 2 ? _T("CRC error") : _T("Error"), pszRomName, GetFilenameW(szBzipName[nCurrentZip]));
 		AppError(szTemp, 1);
 		return 1;
 	}
@@ -349,7 +349,7 @@ int BzipOpen(bool bootApp)
 			free(szBzipName[z]);
 			szBzipName[z] = (TCHAR*)malloc(MAX_PATH * sizeof(TCHAR));
 
-			_stprintf(szBzipName[z], _T("%s%hs"), szAppRomPaths[d], szName);
+			_stprintf(szBzipName[z], _T("%s%s"), szAppRomPaths[d], szName);
 
 			if (ZipOpen(TCHARToANSI(szBzipName[z], NULL, 0)) == 0) {	// Open the rom zip file
 				nZipsFound++;
